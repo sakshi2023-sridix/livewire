@@ -57,4 +57,38 @@ class User extends Authenticatable
             ->map(fn (string $name) => Str::of($name)->substr(0, 1))
             ->implode('');
     }
+
+    public function likes()
+{
+    return $this->hasMany(Like::class);
+}
+public function posts()
+{
+    return $this->hasMany(Post::class);
+}
+public function notifications()
+{
+    return $this->hasMany(Notification::class);
+}
+
+public function comments()
+{
+    return $this->hasMany(Comment::class);
+}
+// User.php
+public function followers()
+{
+    return $this->belongsToMany(User::class, 'follows', 'followed_user_id', 'follower_user_id');
+}
+
+public function following()
+{
+    return $this->belongsToMany(User::class, 'follows', 'follower_user_id', 'followed_user_id');
+}
+
+public function isFollowing($userId)
+{
+    return $this->following()->where('followed_user_id', $userId)->exists();
+}
+
 }

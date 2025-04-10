@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->text('content');
-            $table->unsignedBigInteger('user_id');
+            $table->string('title')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
