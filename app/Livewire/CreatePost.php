@@ -43,7 +43,7 @@ class CreatePost extends Component
         ]);
     // dd($filename);
         session()->flash('message', 'Post created successfully!');
-        return redirect()->route('my-posts');
+        return redirect()->route('user.posts');
     }
     
 

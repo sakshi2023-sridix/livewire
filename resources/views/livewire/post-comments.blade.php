@@ -1,7 +1,5 @@
 <div>
-    <button wire:click="toggleComments" class="btn btn-outline-secondary btn-sm w-100 mb-6">
-        <i class="bi bi-chat-left-text me-1"></i> {{ $post->comments()->count() }} Comments
-    </button>
+   
 
     @if($showComments)
         <form wire:submit.prevent="addComment" class="mb-4">

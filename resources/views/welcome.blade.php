@@ -29,7 +29,7 @@
                     <nav class="bg-white shadow-md rounded-lg p-1 mb-6 flex justify-between">
                         <a href="{{ route('home') }}" class="text-gray-700 font-semibold px-4">Home</a>
                         <a href="{{ route('posts.create') }}" class="text-gray-700 font-semibold px-4">Create Post</a>
-                        <a href="{{ route('my-posts') }}" class="text-gray-700 font-semibold px-4">My Posts</a>
+                        <a href="{{ route('user.posts') }}" class="text-gray-700 font-semibold px-4">My Posts</a>
                         
                     </nav>
                 </div>

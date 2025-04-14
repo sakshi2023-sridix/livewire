@@ -11,7 +11,8 @@ class HomePosts extends Component
     public $perPage = 5;
     public $activePost = null;
     public $showMoreStates = [];
-
+    public $showCommentComponent = [];
+   
     protected $listeners = ['load-more' => 'loadMore'];
 
     public function togglePostComments($postId)

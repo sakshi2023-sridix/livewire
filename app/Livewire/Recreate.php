@@ -29,9 +29,6 @@ class Recreate extends Component
     }
 }
 
-    
-    
-
     public function render()
     {
         return view('livewire.recreate');

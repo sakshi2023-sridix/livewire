@@ -32,17 +32,6 @@ class PostComments extends Component
 
         $this->body = '';
         $this->parent_id = null;
-
-
-        // if ($this->post->user_id !== auth()->id()) {
-        //     $dvfgdgf=$this->post->load('user');
-            
-        //     $dd = $this->post->user->notify(
-        //         new PostCommentedNotification(Auth::user(), $this->post)
-        //     );
-           
-        //     dd($dd);
-        // }
         
     
         $this->reset(['body', 'parent_id']);
@@ -72,4 +61,15 @@ public function loadMore()
 {
     $this->visibleComments += 2;
 }
+public function getListeners()
+{
+    return [
+        "toggle-comments-{$this->post->id}" => 'toggleComments',
+    ];
+}
+
+
+
+
+
 }

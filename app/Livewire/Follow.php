@@ -7,7 +7,6 @@ use App\Models\User;
 class Follow extends Component
 {
    
-   
         public $userId;
         public $isFollow = false;
         public $followCount = 0;
